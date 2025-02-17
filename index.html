@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+<title>HTML, CSS and JavaScript demo</title>
+
+ <script type="text/javascript">
+function showDate() {
+var d = new Date();
+var curr_date = d.getDate();
+var curr_month = d.getMonth() + 1; //months are zero based
+var curr_year = d.getFullYear();
+document.write(curr_date + "-" + curr_month + "-" + curr_year);
+}
+</script>
+
+</head>
+<body>
+<!-- Start your code here -->
+
+<div class="sizes">
+  <label>
+    <input type="radio" name="size" value="l" checked onchange='onChange(this)'>
+    Аренда на день
+  </label>
+  <label>
+    <input type="radio" name="size" value="m" onchange='onChange(this)'>
+    Аренда на месяц
+  </label>
+  <label>
+    <input type="radio" name="size" value="s" onchange='onChange(this)'>
+    Покупка
+  </label>
+</div>
+
+<div class="card size_l" id="card">
+  <img src="https://www.mk.ru/upload/entities/2021/09/22/09/articlesImages/image/54/31/20/4e/5ece41fd95194ff3a845e2952058e9e3.jpg" class="photo">
+  <div class="info">
+    <h3>Двушка в Москве</h3>
+    <p>🗺&nbsp; В центре столицы</p>
+    <p>🚇&nbsp; Рядом станция метро Пушкинская</p>
+  </div>
+  <div class="price" contenteditable="true">
+    ₽ 50 000 / в день
+  </div>
+  <div class="description">
+    Лучшая квартира в вашей жизни. В центре столицы, метро рядом. Чего ещё желать?
+    Евроремонт с отделкой из итальянского мрамора. Пицца 4 сыра в подарок!
+  </div>
+  <div class="actions">
+    <button type="button">📞</button>
+    <button type="button">❤️</button>
+  </div>
+  <div class="date" contenteditable="true">
+    Только сегодня
+  </div>
+</div>
+
+ <script type="text/javascript">showDate();</script>
+
+ <a href="javascript:window.print();">Print Page</a>
+
+ <script type="text/javascript">
+       
+     document.ondragstart = prohibit;//запрещаем перетаскивание
+      
+     document.onselectstart = prohibit;//запрещаем выделение
+       
+     document.oncontextmenu = prohibit;//запрещаем клик правой кнопкой
+       
+     function prohibit() {
+           return false;//предотвращает все эти события
+       }
+   
+   </script>
+
+<!-- End your code here -->
+</body>
+</html>
